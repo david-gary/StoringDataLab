@@ -1,5 +1,4 @@
 import sqlite3
-import datetime
 
 
 def dict_factory(cursor, row):
