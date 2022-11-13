@@ -1,4 +1,5 @@
 import sqlite3
+import datetime
 
 
 def dict_factory(cursor, row):
@@ -18,7 +19,7 @@ class JobsDatabase:
         self.cursor.execute(
             """
             CREATE TABLE IF NOT EXISTS jobs (
-                id INTEGER PRIMARY KEY,
+                id INTEGER PRIMARY KEY AUTOINCREMENT,
                 title TEXT,
                 company TEXT,
                 image_url TEXT

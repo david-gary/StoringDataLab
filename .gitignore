@@ -6,3 +6,5 @@ chromedriver/chromedriver*
 **.log
 **.pyc
 **.db
+jobs.txt
+**.json

@@ -31,10 +31,10 @@ def main():
         jobs_database.insert_job(job)
 
     # get all the jobs
-    jobs = jobs_database.get_all_jobs()
+    db_jobs = jobs_database.get_all_jobs()
 
     # print the jobs
-    for job in jobs:
+    for job in db_jobs:
         print(job)
 
     # close the database

@@ -9,7 +9,10 @@ def dict_list_to_json(dict_list, filename):
     - filename: name of the file to write to
     """
     with open(filename, "w") as file:
-        file.write(dumps(dict_list, indent=4))
+        # TODO: Use the correct function to write the list of dictionaries to a json file
+        # - set the indent to 4
+        json_string = None  # Replace None with the correct function
+        file.write(json_string)
 
 
 def test_json_writer():

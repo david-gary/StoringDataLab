@@ -9,9 +9,8 @@ def create_scraping_url(role, location):
     - uses f strings to format the url
     """
 
-    url = f"https://www.talent.com/jobs?q={role}&l={location}"
-    # pass  # replace this with a return statement
-    return url
+    url = f"https://www.talent.com/jobs?k={role}&l={location}"
+    pass  # TODO: replace this with a return statement
 
 
 def create_chromedriver_path():
@@ -21,8 +20,7 @@ def create_chromedriver_path():
     - use os.path.join to create the path
     - use the `selenium_starter.py` file from last assignment as a guide
     """
-    # pass  # TODO: Complete this function and remove the pass statement
-    return os.path.join(os.getcwd(), "chromedriver", "chromedriver")
+    pass  # TODO: Complete this function and remove the pass statement
 
 
 def scrape_jobs(chromedriver_path, url):
@@ -33,10 +31,8 @@ def scrape_jobs(chromedriver_path, url):
     - returns the list of dictionaries
     """
 
-    # start the driver
+    # start the driver and grab the url
     driver = wd.Chrome(chromedriver_path)
-
-    # get the url
     driver.get(url)
 
     # create a list to hold dictionaries of the jobs
@@ -61,12 +57,11 @@ def scrape_jobs(chromedriver_path, url):
             # TODO: use the find_element method to get the image element at the class "card__job-logo"
             # - this will require you to use the By.CLASS_NAME and get_attribute methods
             # - inspect the page to see which attribute you will need to get the image url
-            job["image_url"] = job_element.find_element(
-                By.CLASS_NAME, "card__job-logo").get_attribute("src")
+            pass  # replace this with the correct code
         except:
             job["image_url"] = None
 
-        # TODO: append the job to the list
+        # TODO: append the job to the list of jobs
 
     return jobs
 
